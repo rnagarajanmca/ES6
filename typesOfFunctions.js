@@ -78,4 +78,36 @@ console.log(x); // 1
 })()
 console.log(x); // 1 !!
 
+// Lambda Optional parentheses
+var lambdaFunction=Name=>{
+    console.log("Hey "+Name)
+}
+lambdaFunction("Naga")
+
+//Generator Functions, yield used to pause the functions and resume it
+function* names(){
+    yield 'Naga';
+    yield 'Mukil';
+    return 'Harshitha';
+}
+for (let name of names()){
+    console.log(name)
+}
+const namesCons=names()
+console.log(names().next())
+console.log(namesCons.next())
+console.log(namesCons.next())
+console.log(namesCons.next())
+
+function* numbers(){
+    for(var index=0;index<3;index++){
+        yield index //Each time it will pause and return the data 
+    }
+}
+var numbersInstance=numbers();
+for(var index=0;index<4;index++){
+    console.log(numbersInstance.next())
+}
+
+
     
